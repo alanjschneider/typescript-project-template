@@ -9,5 +9,5 @@ export default {
     format: 'iife',
     file: './dist/bundle.js',
   },
-  plugins: [typescript(), production && terser()],
+  plugins: [typescript({ sourceMap: !production }), production && terser()],
 };
